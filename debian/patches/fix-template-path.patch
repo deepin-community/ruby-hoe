@@ -1,0 +1,15 @@
+Author: Clint Byrum <clint@ubuntu.com>
+Subject: Move template directory to /usr/share per FHS/Debian Policy
+Last-Update: 2014-01-16
+
+--- a/bin/sow
++++ b/bin/sow
+@@ -62,7 +62,7 @@
+ # variables for erb:
+ template_dir  = File.expand_path("~/.hoe_template")
+ template_path = File.join template_dir, option[:style]
+-source_path   = File.join(File.dirname(File.dirname(__FILE__)), "template")
++source_path   = File.join(File.dirname(File.dirname(__FILE__)), "share","ruby-hoe","template")
+ default_dir   = File.join template_dir, "default"
+ 
+ if File.directory? template_dir and not File.directory? default_dir then

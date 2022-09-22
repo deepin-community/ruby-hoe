@@ -1,0 +1,5 @@
+0004-tests-drop-path-dependent-require.patch
+disable-tests.patch
+fix-template-path.patch
+adapt-bin-wrapper.patch
+0005-Skip-a-date-test.patch

@@ -1,0 +1,8 @@
+Package contains overrides for rubygems because it directly interfaces
+with the Rubygems library.
+
+Normally template ends up in same dir as the script 'sow', but that
+violates FHS so sow has been patched to access template in /usr/share.
+
+Note that the upstream tarball has been repacked to remove Hoe.pdf
+which has no publicly available source or rebuild instructions.

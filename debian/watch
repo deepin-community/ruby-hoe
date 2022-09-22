@@ -1,0 +1,5 @@
+version=4
+
+opts="filenamemangle=s%(?:.*?)?v?(\d[\d.]*)\.tar\.gz%hoe-$1.tar.gz%,dversionmangle=s/\+dfsg\d*$//,repacksuffix=+dfsg1" \
+https://gemwatch.debian.net/hoe \
+(?:.*?/)hoe-?(\d[\d.]*)\.tar\.gz

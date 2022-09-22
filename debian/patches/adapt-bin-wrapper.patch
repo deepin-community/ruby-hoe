@@ -1,0 +1,18 @@
+Description: adapt Gem.bin_wrapper hack to Debian
+Author: Antonio Terceiro
+Origin: vendor
+Forwarded: not-needed
+Last-Update: 2020-02-06
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: ruby-hoe/lib/hoe.rb
+===================================================================
+--- ruby-hoe.orig/lib/hoe.rb	2020-02-06 10:09:52.057675608 +0000
++++ ruby-hoe/lib/hoe.rb	2020-02-06 10:09:52.053675593 +0000
+@@ -945,5 +945,5 @@
+ end
+ 
+ def Gem.bin_wrapper name # :nodoc: HACK
+-  File.join Gem.bindir, Gem.default_exec_format % name
++  "/usr/bin/#{name}"
+ end unless Gem.respond_to? :bin_wrapper

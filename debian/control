@@ -1,0 +1,32 @@
+Source: ruby-hoe
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Clint Byrum <clint@ubuntu.com>,
+           Caitlin Matos <caitlin.matos@zoho.com>,
+Build-Depends: debhelper-compat (= 12),
+               gem2deb,
+               libjs-jquery,
+               rake,
+               ruby-minitest,
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/ruby-team/ruby-hoe.git
+Vcs-Browser: https://salsa.debian.org/ruby-team/ruby-hoe
+Homepage: http://www.zenspider.com/projects/hoe.html
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+Rules-Requires-Root: no
+
+Package: ruby-hoe
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: rake,
+         ruby | ruby-interpreter,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: rake/rubygems helper for project Rakefiles
+ Hoe is a rake/rubygems helper for project Rakefiles. It helps you
+ manage and maintain, and release your project and includes a dynamic
+ plug-in system allowing for easy extensibility. Hoe ships with
+ plug-ins for all your usual project tasks including rdoc generation,
+ testing, packaging, and deployment.

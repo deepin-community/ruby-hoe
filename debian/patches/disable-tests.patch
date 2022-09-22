@@ -1,0 +1,24 @@
+Description: Disable rubygems test
+Author: Ondřej Surý
+Origin: vendor
+Last-Update: 2020-02-06
+
+Index: ruby-hoe/test/test_hoe.rb
+===================================================================
+--- ruby-hoe.orig/test/test_hoe.rb	2020-02-06 10:09:25.925560288 +0000
++++ ruby-hoe/test/test_hoe.rb	2020-02-06 10:09:25.925560288 +0000
+@@ -94,10 +94,10 @@
+     reset_hoe load_path, home
+   end
+ 
+-  def test_have_gem_eh
+-    assert hoe.have_gem? "rake"
+-    refute hoe.have_gem? "nonexistent"
+-  end
++#  def test_have_gem_eh
++#    assert hoe.have_gem? "rake"
++#    refute hoe.have_gem? "nonexistent"
++#  end
+ 
+   def test_initialize_plugins_hoerc
+     home = ENV["HOME"]

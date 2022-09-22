@@ -1,0 +1,42 @@
+.TH SOW "1" "August 2014" "hoe 3.12.0" "sow (ruby-hoe)"
+.SH NAME
+sow \- command line interface for the Hoe gem creation helper library
+.SH SYNOPSIS
+.B sow
+[\fIoptions\fR] \fIproject_name\fR
+.SH DESCRIPTION
+.B sow
+is a command-line interface for \fBhoe\fR.
+
+.B hoe 
+is a rake/rubygems helper for Rakefiles. It helps you manage, maintain,
+and release your project and includes a dynamic plug-in system allowing for
+easy extensibility. The included plug-ins help with your usual project tasks,
+including rdoc generation, testing, packaging, deployment, and announcement.
+Many third-party plug-ins are also available.
+
+.SH OPTIONS
+.TP
+\fB\-t\fR, \fB\-\-trunk\fR
+Add project to \fIproject_name/trunk/\fR
+.TP
+\fB\-d\fR, \fB\-\-dev\fR
+Add project to \fIproject_name/dev/\fR
+.TP
+\fB\-s\fR \fIstyle\fR, \fB\-\-style\fR \fIstyle\fR
+Use the template \fIstyle\fR
+.TP
+\fB\-h\fR, \fB\-\-help\fR
+Show a help message similar to this page.
+
+.SH AUTHORS
+.B sow
+and
+.B hoe
+were created by Ryan Davis.
+
+This page was written for the Debian project be can be used by others.
+
+.SH SEE ALSO
+.nh
+More comprehensive documentation for \fBhoe\fR is located under \fI/usr/share/doc/ruby-hoe/rdoc/index.html\fR, and online at \fIhttp://docs.seattlerb.org/hoe\fR. An additional manual is available at \fIhttp://docs.seattlerb.org/hoe/Hoe.pdf\fR.

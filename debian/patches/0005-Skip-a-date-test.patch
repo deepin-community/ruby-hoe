@@ -1,0 +1,30 @@
+From: Lucas Kanashiro <kanashiro@ubuntu.com>
+Date: Mon, 29 Jun 2020 19:05:36 -0300
+Subject: Skip a date test
+
+This test failure is affecting only downstreams. The spec.date call in
+the test is weirdly returning the date of the last entry in
+debian/changelog which does not match Gem::Specification::TODAY (day of
+the build).
+
+Debian-Bug: https://bugs.debian.org/952041
+Forwarded: not-needed
+Last-Updated: 2020-06-29
+
+Gpb-Pq: Name skip-a-date-test.patch
+---
+ test/test_hoe.rb | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/test/test_hoe.rb b/test/test_hoe.rb
+index 858a6e0..9add0b7 100644
+--- a/test/test_hoe.rb
++++ b/test/test_hoe.rb
+@@ -351,7 +351,6 @@ class TestHoe < Minitest::Test
+     assert_equal ">= 0", spec.required_rubygems_version.to_s
+ 
+     assert_equal ["author"], spec.authors
+-    assert_equal t, spec.date
+     assert_match(/Hoe.*Rakefiles/, spec.description)
+     assert_equal ["email"], spec.email
+     assert_equal ["sow"], spec.executables

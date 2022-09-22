@@ -1,0 +1,16 @@
+Description: tests: drop require which relies on path
+ This should fix running the tests during autopkgtest.
+Author: Georg Faerber <georg@debian.org>
+Last-Update: 2020-02-06
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+Index: ruby-hoe/test/test_hoe_debug.rb
+===================================================================
+--- ruby-hoe.orig/test/test_hoe_debug.rb	2020-02-06 11:09:29.927135218 +0000
++++ ruby-hoe/test/test_hoe_debug.rb	2020-02-06 11:32:02.989700967 +0000
+@@ -1,5 +1,4 @@
+ require "hoe"
+-require File.expand_path "lib/hoe/debug.rb" # ugh. avoid dupe warnings
+ require "tmpdir"
+ require "tempfile"
+ require "minitest/autorun"
